@@ -12,7 +12,9 @@ public class LeitorXML {
 		
 		
 		XStream stream = new XStream(new DomDriver());
-		stream.alias("negocio", Negocio.class)
+		stream.alias("negocio", Negocio.class);
+		return (List<Negocio>) stream.fromXML(fonte);
+			
 	}
 
 }
